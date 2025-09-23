@@ -1,0 +1,163 @@
+/* ======== Reset ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======== Layout geral ======== */
+body {
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #5c0057;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #5c0057;
+}
+
+/* ======== Cabeçalho ======== */
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #5c0057;
+}
+
+/* ======== Seções ======== */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#inicio {
+  background: linear-gradient(to right, #5c0057, #85007e);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+#inicio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#inicio a {
+  background: white;
+  color: #5c0057;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#inicio a:hover {
+  background: #5c0057;
+  color: #fff;
+}
+
+/* ======== Projetos ======== */
+#projetos .projeto {
+  background: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+#projetos .projeto:hover {
+  transform: translateY(-5px);
+}
+
+/* ======== Habilidades ======== */
+#habilidades ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+#habilidades li {
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+/* ======== Formulário ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background: #5c0057;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5c0057;
+}
+
+/* ======== Rodapé ======== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 40px;
+}
