@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Carlos Eduardo Mota </title>
+  <title>Portfólio - Carlos Eduardo Mota</title>
   <link rel="stylesheet" href="style.css"> <!-- Arquivo CSS externo -->
 </head>
 <body>
@@ -24,13 +24,15 @@
   <section id="inicio">
     <h2>Meu Portfólio</h2>
     <p>Sou estudante, apaixonado por Design.</p>
+    
     <a href="#contato">Entre em contato</a>
   </section>
 
   <!-- Sobre -->
   <section id="sobre">
     <h2>Sobre mim</h2>
-    <p>Tenho 18 anos, faço Fatec de Jogos Digitais e Anhanguera de Analise e Desenvolvimento de Sistemas, faço a minha parte mas ajudo os outros se necessario.</p>
+    <p>Tenho 18 anos, faço Fatec de Jogos Digitais e Anhanguera de Análise e Desenvolvimento de Sistemas. 
+    Faço a minha parte, mas sempre ajudo os outros quando necessário.</p>
   </section>
 
   <!-- Projetos -->
@@ -38,11 +40,13 @@
     <h2>Projetos</h2>
     <div class="projeto">
       <h3>Learn Emotion</h3>
-      <p>TCC de Primeiro Semestre da Fatec, um jogo focado na historia, ao qual conta a historia de Seassi, que foi acordada anos no futuro e precisa salvar a terra de um cataclismo global.</p>
+      <p>TCC do Primeiro Semestre da Fatec — um jogo focado na narrativa, que conta a história de Seassi, 
+      uma personagem que acorda anos no futuro e precisa salvar a Terra de um cataclismo global.</p>
     </div>
     <div class="projeto">
       <h3>Entre os 3</h3>
-      <p>TCC do Segundo Semestre da Fatec, em desenvolvimento, um jogo rpg que conta a historia de um personagem que precisa lidar com problemas em 3 dimensões diferentes, que se passam no Passado, Presente e Futuro.</p>
+      <p>TCC do Segundo Semestre da Fatec (em desenvolvimento). Um jogo RPG que narra a jornada de um personagem 
+      que precisa enfrentar desafios em três dimensões diferentes: Passado, Presente e Futuro.</p>
     </div>
   </section>
 
@@ -51,7 +55,7 @@
     <h2>Habilidades</h2>
     <ul>
       <li>HTML e CSS</li>
-      <li>Canvas</li>
+      <li>Canva</li>
       <li>Adobe Photoshop</li>
       <li>Pacote Office</li>
     </ul>
@@ -60,7 +64,7 @@
   <!-- Contato -->
   <section id="contato">
     <h2>Contato</h2>
-    <form action="#" method="post">
+    <form id="form-contato" action="#" method="post">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
       
@@ -72,14 +76,33 @@
       
       <button type="submit">Enviar</button>
     </form>
+
+    <!-- Mensagem de confirmação -->
+    <p id="msg-sucesso" style="display:none; color:#00ff88; font-weight:bold; margin-top:15px;">
+      ✅ Sua mensagem foi enviada com sucesso!
+    </p>
   </section>
 
   <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Carlos Eduardo Mota Diniz. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script de Confirmação -->
+  <script>
+    const form = document.getElementById("form-contato");
+    const msg = document.getElementById("msg-sucesso");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      msg.style.display = "block";
+      form.reset();
+
+      // Oculta a mensagem após 4 segundos
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 4000);
+    });
+  </script>
 </body>
 </html>
-
-
-
